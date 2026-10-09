@@ -18,35 +18,35 @@ Cinq règles Snort sont définies dans `config/snort-local.rules`, une par scén
 - **Objectif de l'attaquant** : vérifier qu'une machine est active.
 - **Attaque (Kali)** : `ping -c 4 <IP_UBUNTU>`
 - **Alerte attendue** : `PING detecte`
-- **Capture** : ![ping](captures/ping.png)
+- **Capture** : ![ping](../captures/ping.png)
 
 ## Scénario 2 — Scan de ports
 
 - **Objectif** : découvrir les services ouverts.
 - **Attaque (Kali)** : `nmap -sS <IP_UBUNTU>`
 - **Alerte attendue** : `Scan de ports detecte` (seuil via `detection_filter`)
-- **Capture** : ![scan](captures/scan.png)
+- **Capture** : ![scan](../captures/scan.png)
 
 ## Scénario 3 — Force brute SSH
 
 - **Objectif** : deviner des identifiants SSH par tentatives répétées.
 - **Attaque (Kali)** : plusieurs tentatives de connexion rapides au port 22, par exemple `for i in $(seq 1 10); do ssh -o ConnectTimeout=2 test@<IP_UBUNTU> true; done`
 - **Alerte attendue** : `Force brute SSH detectee`
-- **Capture** : ![ssh](captures/ssh.png)
+- **Capture** : ![ssh](../captures/ssh.png)
 
 ## Scénario 4 — Directory traversal
 
 - **Objectif** : lire des fichiers hors de la racine web.
 - **Attaque (Kali)** : `curl --path-as-is "http://<IP_UBUNTU>/../../etc/passwd"`
 - **Alerte attendue** : `Directory traversal detecte`
-- **Capture** : ![traversal](captures/traversal.png)
+- **Capture** : ![traversal](../captures/traversal.png)
 
 ## Scénario 5 — Injection SQL
 
 - **Objectif** : altérer une requête SQL via un paramètre.
 - **Attaque (Kali)** : `curl "http://<IP_UBUNTU>/?id=1%20OR%201=1"`
 - **Alerte attendue** : `Injection SQL detectee`
-- **Capture** : ![SQL](captures/SQL.png)
+- **Capture** : ![SQL](../captures/SQL.png)
 
 ## Lire les captures Kibana
 
