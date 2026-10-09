@@ -1,4 +1,4 @@
-# Installation pas-à-pas
+# Installation
 
 Deux machines virtuelles : **Ubuntu Server** (victime, héberge Snort, syslog-ng et la pile ELK) et **Kali Linux** (attaquant).
 Dans la suite, `<IP_UBUNTU>` et `<IP_KALI>` désignent leurs adresses.
