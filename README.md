@@ -1,4 +1,4 @@
-# Projet SOC — Détection d'intrusions (8INF857)
+# Projet Sécurité Informatique : Détection d'intrusions (8INF857)
 
 Mini centre de surveillance de sécurité (SOC) : détecter des attaques réseau,
 les collecter, les stocker, les visualiser et alerter l'administrateur.
@@ -104,5 +104,5 @@ Projet de groupe :
 - LENNE Luc
 - ZOZOR Matthieu
 
-cours 8INF857, UQAC, automne 2026.
+Cours 8INF857, UQAC, automne 2026.
 
